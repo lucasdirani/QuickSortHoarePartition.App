@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>QuickSortHoarePartition.App.Performance.TestePerformanceAlgoritmoQuickSort-20240201-081541</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.5, OS=Windows 10 (10.0.19045.3930/22H2/2022Update)
+Intel Core i7-10510U CPU 1.80GHz, 1 CPU, 8 logical and 4 physical cores
+.NET SDK=7.0.404
+  [Host]     : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
+  DefaultJob : .NET 7.0.14 (7.0.1423.51910), X64 RyuJIT AVX2
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>             Method</th><th>  Array</th><th>         Mean</th><th>      Error</th><th>     StdDev</th><th>       Median</th><th>Rank</th><th>Gen0</th><th>Gen1</th><th>Gen2</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>MedirPerformanceQuickSort</td><td>Int32[100000]</td><td>1,696,434,546.32 ns</td><td>28,253,893.792 ns</td><td>29,014,668.741 ns</td><td>1,692,008,518.75 ns</td><td>10</td><td>-</td><td>-</td><td>-</td><td>38 B</td>
+</tr><tr><td>MedirPerformanceMergeSort</td><td>Int32[100000]</td><td>5,513,068.47 ns</td><td>109,938.236 ns</td><td>167,887.298 ns</td><td>5,433,359.38 ns</td><td>8</td><td>2679.6875</td><td>242.1875</td><td>242.1875</td><td>12031270 B</td>
+</tr><tr><td>MedirPerformanceQuickSort</td><td>Int32[10000]</td><td>16,464,618.96 ns</td><td>111,886.521 ns</td><td>104,658.721 ns</td><td>16,445,075.00 ns</td><td>9</td><td>-</td><td>-</td><td>-</td><td>19 B</td>
+</tr><tr><td>MedirPerformanceMergeSort</td><td>Int32[10000]</td><td>436,978.94 ns</td><td>2,328.229 ns</td><td>1,944.177 ns</td><td>436,923.78 ns</td><td>7</td><td>255.8594</td><td>-</td><td>-</td><td>1072016 B</td>
+</tr><tr><td>MedirPerformanceQuickSort</td><td>Int32[1000]</td><td>173,618.67 ns</td><td>1,334.673 ns</td><td>1,248.454 ns</td><td>173,493.68 ns</td><td>6</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>MedirPerformanceMergeSort</td><td>Int32[1000]</td><td>36,003.92 ns</td><td>581.745 ns</td><td>454.189 ns</td><td>35,932.66 ns</td><td>5</td><td>22.0337</td><td>-</td><td>-</td><td>92304 B</td>
+</tr><tr><td>MedirPerformanceQuickSort</td><td>Int32[100]</td><td>2,880.01 ns</td><td>57.212 ns</td><td>119.423 ns</td><td>2,816.48 ns</td><td>3</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>MedirPerformanceMergeSort</td><td>Int32[100]</td><td>2,917.14 ns</td><td>37.910 ns</td><td>31.656 ns</td><td>2,910.02 ns</td><td>4</td><td>1.9112</td><td>-</td><td>-</td><td>8000 B</td>
+</tr><tr><td>MedirPerformanceQuickSort</td><td>Int32[10]</td><td>58.80 ns</td><td>0.413 ns</td><td>0.344 ns</td><td>58.72 ns</td><td>1</td><td>-</td><td>-</td><td>-</td><td>-</td>
+</tr><tr><td>MedirPerformanceMergeSort</td><td>Int32[10]</td><td>204.51 ns</td><td>2.029 ns</td><td>1.694 ns</td><td>203.84 ns</td><td>2</td><td>0.1490</td><td>-</td><td>-</td><td>624 B</td>
+</tr></tbody></table>
+</body>
+</html>
